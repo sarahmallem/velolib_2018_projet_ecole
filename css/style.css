@@ -1,0 +1,261 @@
+/* -------------------- GENERAL ------------------------ */
+
+body {
+	background-color: #27292e;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-size: 49px;
+	color: #9A9DA2;
+	float: left;
+	margin-left: 11%;
+}
+
+h1,
+nav {
+	display: inline-block;
+	justify-content: space-around;
+}
+
+h2 {
+	/* Message de bienvenue */
+	text-align: center;
+	color: #7C7D82;
+	margin-top: 8%;
+}
+
+h3 {
+	/* Message location de vélo dans la ville de Nancy */
+	margin-left: 1%;
+	font-size: 50px;
+	color: #d4d4d5;
+	text-align: center;
+}
+
+h4 {
+	/* Message sur popup */
+	text-align: center;
+	margin-bottom: 2%;
+}
+
+h5 {
+	/* message dans footer */
+	text-align: center;
+}
+
+.TexteSlider {
+	color: #d4d4d5;
+	font-size: 110%;
+}
+
+@font-face {
+	font-family: 'robotoregular';
+	src: url('Roboto-Regular-webfont.eot');
+	src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('Roboto-Regular-webfont.woff2') format('woff2'), url('Roboto-Regular-webfont.woff') format('woff'), url('Roboto-Regular-webfont.ttf') format('truetype'), url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+p {
+	color: #9c9c9c;
+}
+
+/* -------------------- HEADER ------------------------  */
+
+header {
+	background-color: #27292e;
+	box-shadow: 0px 0px 5px 0px black;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: inline-block;
+}
+
+/* --------------------Barre de navigation ------------------------  */
+nav ul {
+	list-style-type: none;
+	margin-left: 400%;
+	margin-top: 10%;
+	display: flex;
+}
+
+nav li {
+  padding-top: 26px;
+  margin-right: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #d4d4d5;
+}
+
+
+/* -------------------- Diaporama ------------------------  */
+.diaporama img {
+	height: 300px;
+	width: 400px;
+	display: flex;
+	justify-content: flex-start;
+
+}
+
+#conteneurdiaporama {
+	background-color: #35363B;
+	width: 50%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0px 0px 5px 0px black;
+}
+
+.TexteSlider {
+	display: flex;
+	justify-content: center;
+	margin-top: 10%;
+	margin-right: 10%;
+	float: right;
+}
+
+#slider3 img {
+	width: 45%;
+	height: 4000%;
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+
+.generalbouton {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* -------------------- REVERSATION DE LOCATION DE VELO ------------------------  */
+
+.reservationmenu {
+	margin-top: 5px;
+}
+
+#map {
+	position: absolute;
+	z-index: 4;
+	height: 500px;
+	width: 50%;
+	margin-left: 14%;
+	box-shadow: 0px 0px 5px 0px black;
+}
+
+/* -------------------- CONTACT ------------------------  */
+
+.contact {
+	box-shadow: 0px 0px 5px 0px black;
+	position: absolute;
+	right: 15%;
+	bottom: -15%;
+	padding-left: 20px;
+	padding-right: 2%;
+	padding-bottom: 2%;
+	padding: 2%;
+	background-color: #35363B;
+	height: 300px;
+	max-width: 200px;
+	min-width: 200px;
+
+
+}
+
+#bouton {
+	margin-top: 20%;
+	margin-left: 30%;
+	border-radius: 5px;
+}
+
+input {
+	margin-bottom: 16px;
+	width: 80%;
+	margin-bottom: 2px;
+	background-color: #d4d4d5;
+}
+
+/* -------------------- CONTACT BOUTON RESERVATION SIGNATURE ------------------------  */
+
+#popup {
+	height: 300px;
+	width: 30%;
+	border-radius: 30px;
+	border: 1px solid black;
+	margin-left: 60%;
+	background-color: #35363B;
+	position: absolute;
+	z-index: 8;
+	top: 110%;
+	right: 8%;
+}
+
+#boutonvalider,
+#boutonannuler,
+#boutoneffacer {
+	box-shadow: 0px 3px 0px 0px #656565;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.groupebouton {
+	margin-left: 40%;
+}
+
+.signature {
+	height: 200px;
+	width: 300px;
+	background-color: #d4d4d5;
+	margin-left: 25%;
+	border: 1px solid black;
+	margin-bottom: 1%;
+}
+
+.informations {
+	margin-top: 30%;
+	margin-left: 15%;
+	float: left;
+	background-color: #35363B;
+
+
+}
+
+/* -------------------- FOOTER ------------------------  */
+
+footer {
+	background-color: #e8676b;
+	height: 70px;
+	margin-top: 32%;
+	display: flex;
+	justify-content: space-around;
+}

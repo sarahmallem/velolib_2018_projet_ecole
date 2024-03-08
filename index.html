@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title> Location de vélo dans la ville de Nancy </title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" type="images/ico" href="images/favicon.ico" />
+</head>
+
+<!-- ------- Barre de navigation ---------- -->
+
+<body>
+
+	<header>
+		<h1>VélOstan'lib</h1>
+		<nav>
+			<ul>
+				<li><a href="#accueil">ACCUEIL</a></li>
+				<li><a href="#reservation">RESERVATION</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- ------- Fin barre de navigation --------- -->
+
+
+
+	<!-- -------- Diaporama ---------- -->
+	<h2>Aide à la réservation</h2>
+	<section id="conteneurdiaporama">
+		<div class="carousel-scroller">
+			<div class="diaporama fade">
+				<div class="TexteSlider">
+					<p>Bienvenue sur le site de Vélostan'lib. <br>Réserver votre vélo en quelques cliques.</p>
+				</div>
+				<img src="images/slider1.jpg" alt="Image du diaporama 1" />
+			</div>
+			<div class="diaporama fade">
+				<div class="TexteSlider">
+					<p>Choissisez votre station de<br> location de vélo directement sur la carte!</p>
+				</div>
+				<img src="images/slider2.jpg" alt="Image du diaporama 2" />
+			</div>
+			<div class="diaporama fade">
+				<div class="TexteSlider">
+					<p>Remplissez le formulaire et réserver des maintenant<br> votre vélo dans la station de votre choix!</p>
+				</div>
+				<img src="images/slider3.jpg" id="slider3" alt="Image du diaporama 3" />
+			</div>
+		</div>
+
+		<div class="generalbouton">
+			<div class="boutonSlider" id="precedent" onclick="move(-1)">&#10094;</div>
+			<div class="boutonSlider" id="pause" onclick="pauseSlide()">II►</div>
+			<div class="boutonSlider" id="suivant" onclick="move(+1)">&#10095;</div>
+		</div>
+	</section>
+
+	<!-- --------- FIN DU DIAPORAMA ------------ -->
+
+
+	<!-- --------- RESERVATION MAP ------------ -->
+	<section class="mapetmenu">
+		<div class="reservationmenu">
+			<h3>Location de vélo dans la ville de Nancy</h3>
+		</div>
+		<div id="map"></div>
+	</section>
+	<p class="informations" id="informations"> Vélo réservé à la station <span id="gareReserve">-</span> par <span id="personneReserve">-</span><br> Temps restant: <span id="tempsRestant"></span> minutes</p>
+
+
+	<!-- ------- FIN DE RESERVATION MAP ---------- -->
+
+	<!-- -------- CONTACT  ----------- -->
+
+	<div class="contact">
+		<p><span>Adresse: </span> <span id="address"> - </span></p>
+		<p><span>Places dispos: </span> <span id="available_bikes"> - </span></p>
+
+		<div class="nomprenom">
+			<p>Nom:</p><input type="text" name="lastname" id="lastname" placeholder="Anquetil" />
+			<p>Prénom:</p><input type="text" name="firstname" id="firstname" placeholder="Jaqcues" />
+		</div>
+		<button type="button" id="bouton" onclick="openModal()"> Réservation </button>
+
+	</div>
+	<br>
+	<div id="popup" hidden>
+		<h4>Veuillez signer pour valider votre réservation, à bientôt!</h4>
+		<canvas class="signature" id="signature"></canvas>
+		<div class="groupebouton">
+			<button id="boutonannuler"> Annuler </button>
+			<button id="boutoneffacer" onclick="erase()"> Effacer </button>
+			<button id="boutonvalider"> Valider </button>
+		</div>
+	</div>
+
+
+	<!-- ------ FIN DE CONTACT  ---------- -->
+
+	<footer>
+		<h5> Contact - Mentions légales par Sarah Mallem, tous droits résérvés - Conditions d'utilisateurs - Mon compte </h5>
+	</footer>
+
+	<!-- Inclus le script -->
+	<script src=" https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+	<!-- ------ Redirection vers fichier Javascript ---------- -->
+	<script type="text/javascript" src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/carte.js"></script>
+	<script type="text/javascript" src="js/slider.js"></script>
+	<script type="text/javascript" src="js/reservation.js"></script>
+</body>
+
+</html>
